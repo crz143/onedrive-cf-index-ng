@@ -26,7 +26,6 @@ export type OdFileObject = {
   name: string
   size: number
   id: string
-  
   file: { mimeType: string; hashes: { quickXorHash: string; sha1Hash?: string; sha256Hash?: string } }
   image?: OdImageFile
   video?: OdVideoFile
