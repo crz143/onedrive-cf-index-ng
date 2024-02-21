@@ -9,9 +9,9 @@ export type OdFolderObject = {
   '@odata.nextLink'?: string
   value: Array<{
     id: string
+    lastModifiedDateTime: string
     name: string
     size: number
-    lastModifiedDateTime: string
     file?: { mimeType: string; hashes: { quickXorHash?: string; sha1Hash?: string; sha256Hash?: string } }
     folder?: { childCount: number; view: { sortBy: string; sortOrder: 'ascending'; viewType: 'thumbnails' } }
     image?: OdImageFile
@@ -22,10 +22,11 @@ export type OdFolderChildren = OdFolderObject['value'][number]
 // A file object returned from the OneDrive API. This object may contain 'video' if the file is a video.
 export type OdFileObject = {
   '@odata.context': string
+  lastModifiedDateTime: string  
   name: string
   size: number
   id: string
-  lastModifiedDateTime: string
+  
   file: { mimeType: string; hashes: { quickXorHash: string; sha1Hash?: string; sha256Hash?: string } }
   image?: OdImageFile
   video?: OdVideoFile
