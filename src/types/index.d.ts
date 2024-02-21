@@ -67,6 +67,6 @@ export type OdDriveItem = {
   '@odata.context': string
   '@odata.etag': string
   id: string
-  name: string
+  lastModifiedDateTime: string
   parentReference: { driveId: string; driveType: string; id: string; path: string }
 }
